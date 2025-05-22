@@ -2,8 +2,8 @@ import torch
 from scipy.special import softmax
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
-tokenizer = AutoTokenizer.from_pretrained("/home/nobroker/Downloads/emailclassification/backend/checkpoint-770")
-model = AutoModelForSequenceClassification.from_pretrained("/home/nobroker/Downloads/emailclassification/backend/checkpoint-770")
+tokenizer = AutoTokenizer.from_pretrained("Adi016/distilBertModel")
+model = AutoModelForSequenceClassification.from_pretrained("Adi016/distilBertModel")
 
 def classify(email) :
 
@@ -83,13 +83,9 @@ def classify(email) :
 
 
     predicted_class_id = probs.argmax()
-    print("here \n")
-    print(predicted_class_id)
 
     if predicted_class_id >=0 and predicted_class_id <=7 :
-        print(predicted_class_id)
         predicted_label = id2label[predicted_class_id]
-        print(predicted_label)
     else :
         predicted_label = "Intent_Mixed_Other"
 
