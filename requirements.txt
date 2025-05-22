@@ -1,0 +1,9 @@
+flask>=2.2
+flask-cors
+werkzeug>=2.2
+transformers
+torch
+scipy
+datasets
+scikit-learn
+pandas
