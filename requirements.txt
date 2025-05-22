@@ -7,4 +7,3 @@ scipy
 datasets
 scikit-learn
 pandas
-os
